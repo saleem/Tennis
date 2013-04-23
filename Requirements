@@ -1,0 +1,4 @@
+1. When the game starts, the score call is "Love All"
+2. When server wins first rally, score call is "Fifteen Love"
+3. When receiver wins first rally, score call is "Love Fifteen"
+4. When server wins second rally and receiver has not won any rallies, score call is "Thirty Love".
