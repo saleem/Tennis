@@ -19,4 +19,8 @@ public class Score {
     public void rallyForServer() {
         gameCall = "Fifteen Love";
     }
+
+    public void rallyForReceiver() {
+        gameCall = "Love Fifteen";
+    }
 }
