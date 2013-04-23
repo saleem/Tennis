@@ -6,7 +6,17 @@
  * To change this template use File | Settings | File Templates.
  */
 public class Score {
+    private String gameCall;
+
+    public Score() {
+        gameCall = "Love All";
+    }
+
     public String call() {
-        return "Love All";
+        return gameCall;
+    }
+
+    public void rallyForServer() {
+        gameCall = "Fifteen Love";
     }
 }
