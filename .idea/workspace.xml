@@ -9,9 +9,9 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366738880838" ignored="false" />
     <file path="/Requirements" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366738993985" ignored="false" />
-    <file path="/ScoreTest.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366740904494" ignored="false" />
+    <file path="/ScoreTest.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366741485272" ignored="false" />
     <file path="/fragment.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366740362534" ignored="false" />
-    <file path="/Score.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366740952193" ignored="false" />
+    <file path="/Score.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366741569315" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,16 +73,16 @@
       <file leaf-file-name="Requirements" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Requirements">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="68" selection-start="119" selection-end="179" vertical-scroll-proportion="0.0">
+            <state line="3" column="99" selection-start="183" selection-end="279" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ScoreTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ScoreTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="25" selection-start="131" selection-end="131" vertical-scroll-proportion="0.17321016">
+            <state line="34" column="17" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Score.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Score.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="34" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
+            <state line="6" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="0.44117647">
               <folding />
             </state>
           </provider>
@@ -118,15 +118,15 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/Requirements" />
-        <option value="$PROJECT_DIR$/test/ScoreTest.java" />
         <option value="$PROJECT_DIR$/src/Score.java" />
+        <option value="$PROJECT_DIR$/test/ScoreTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="807" />
+    <option name="height" value="578" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -294,6 +294,29 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="ScoreTest.whenServerWinsSecondRallyAndReceiverHasNotWonAnyRalliesScoreForGameIsThirtyLove" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Tennis" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ScoreTest" />
+      <option name="METHOD_NAME" value="whenServerWinsSecondRallyAndReceiverHasNotWonAnyRalliesScoreForGameIsThirtyLove" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -385,16 +408,18 @@
       <patterns />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.ScoreTest.scoreForNewGameIsLoveAll" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.ScoreTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.ScoreTest.whenTheReceiverWinsFirstRallyScoreForGameIsLoveFifteen" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ScoreTest.whenServerWinsSecondRallyAndReceiverHasNotWonAnyRalliesScoreForGameIsThirtyLove" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="JUnit.ScoreTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ScoreTest.whenTheReceiverWinsFirstRallyScoreForGameIsLoveFifteen" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ScoreTest.scoreForNewGameIsLoveAll" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ScoreTest.whenServerWinsSecondRallyAndReceiverHasNotWonAnyRalliesScoreForGameIsThirtyLove" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ScoreTest.whenTheReceiverWinsFirstRallyScoreForGameIsLoveFifteen" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ScoreTest.scoreForNewGameIsLoveAll" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -412,7 +437,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="807" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="578" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -432,8 +457,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24605452" sideWeight="0.6710335" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32896653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24605452" sideWeight="0.5065502" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49344978" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -503,24 +528,24 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Requirements">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="68" selection-start="119" selection-end="179" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="34" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
+        <state line="3" column="99" selection-start="183" selection-end="279" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ScoreTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="131" selection-end="131" vertical-scroll-proportion="0.17321016">
+        <state line="34" column="17" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="0.44117647">
+          <folding />
         </state>
       </provider>
     </entry>

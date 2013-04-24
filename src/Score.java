@@ -1,26 +1,19 @@
-/**
- * Created with IntelliJ IDEA.
- * User: Thoughtworker
- * Date: 23/04/13
- * Time: 1:06 PM
- * To change this template use File | Settings | File Templates.
- */
 public class Score {
     private String gameCall;
+    private int serverScore;
+    private int receiverScore;
 
-    public Score() {
-        gameCall = "Love All";
-    }
+    private static final String[] CALLS = {"Love", "Fifteen", "Thirty", "Forty"};
 
     public String call() {
-        return gameCall;
+        return CALLS[serverScore] + " " + (serverScore == receiverScore? "All" : CALLS[receiverScore]);
     }
 
     public void rallyForServer() {
-        gameCall = "Fifteen Love";
+        serverScore ++;
     }
 
     public void rallyForReceiver() {
-        gameCall = "Love Fifteen";
+        receiverScore ++;
     }
 }

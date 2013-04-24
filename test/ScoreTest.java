@@ -23,4 +23,21 @@ public class ScoreTest {
         score.rallyForReceiver();
         assertThat(score.call(), is("Love Fifteen"));
     }
+
+    @Test
+    public void whenServerWinsSecondRallyAndReceiverHasNotWonAnyRalliesScoreForGameIsThirtyLove() {
+        Score score = new Score();
+        score.rallyForServer();
+        score.rallyForServer();
+        assertThat(score.call(), is("Thirty Love"));
+    }
+
+    @Test
+    public void whenServerWinsThirdRallyAndReceiverHasNotWonAnyRalliesScoreForGameIsFortyLove() {
+        Score score = new Score();
+        score.rallyForServer();
+        score.rallyForServer();
+        score.rallyForServer();
+        assertThat(score.call(), is("Forty Love"));
+    }
 }
