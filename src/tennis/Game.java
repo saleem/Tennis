@@ -24,7 +24,7 @@ public class Game {
     }
 
     private String whoHasAdvantage() {
-        if (gameOver()) throw new InvalidGameOperationException("tennis.Game over! No one has Advantage.");
+        if (gameOver()) throw new InvalidGameOperationException("Game over! No one has Advantage.");
         if (deuce()) throw new InvalidGameOperationException("Deuce! No one has Advantage.");
         if (!beyondDeuce()) throw new InvalidGameOperationException("Not reached Deuce yet! No one has Advantage.");
         return (serverScore > receiverScore) ? SERVER : RECEIVER;
@@ -35,7 +35,7 @@ public class Game {
     }
 
     private String whoWon() {
-        if (!gameOver()) throw new InvalidGameOperationException("tennis.Game not yet over! No one has won.");
+        if (!gameOver()) throw new InvalidGameOperationException("Game not yet over! No one has won.");
         return (serverScore > receiverScore) ? SERVER : RECEIVER;
     }
 
@@ -58,14 +58,14 @@ public class Game {
 
     public void rallyForServer() {
         if (gameOver()) {
-            throw new InvalidGameOperationException("tennis.Game over: server cannot win any more rallies!");
+            throw new InvalidGameOperationException("Game over: server cannot win any more rallies!");
         }
         serverScore++;
     }
 
     public void rallyForReceiver() {
         if (gameOver()) {
-            throw new InvalidGameOperationException("tennis.Game over: receiver cannot win any more rallies!");
+            throw new InvalidGameOperationException("Game over: receiver cannot win any more rallies!");
         }
         receiverScore++;
     }

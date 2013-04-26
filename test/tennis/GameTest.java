@@ -1,16 +1,20 @@
 package tennis;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
-import tennis.Game;
-import tennis.InvalidGameOperationException;
+import org.junit.rules.ExpectedException;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+
 public class GameTest {
 
     private Game game;
+
+    @Rule
+    public ExpectedException expectedException = ExpectedException.none();
 
     @Before
     public void setUp() throws Exception {
@@ -89,14 +93,18 @@ public class GameTest {
         assertThat(game.call(), is("Advantage Receiver"));
     }
 
-    @Test(expected = InvalidGameOperationException.class)
+    @Test
     public void whenGameIsOverServerCannotWinAnyMoreRallies() {
+        expectedException.expect(InvalidGameOperationException.class);
+        expectedException.expectMessage("Game over: server cannot win any more rallies!");
         ralliesForServer(4);
         ralliesForServer(1);
     }
 
-    @Test(expected = InvalidGameOperationException.class)
+    @Test
     public void whenGameIsOverReceiverCannotWinAnyMoreRallies() {
+        expectedException.expect(InvalidGameOperationException.class);
+        expectedException.expectMessage("Game over: receiver cannot win any more rallies!");
         ralliesForServer(4);
         ralliesForReceiver(1);
     }
