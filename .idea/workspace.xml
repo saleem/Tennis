@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Game.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/GameTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Score.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/ScoreTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Requirements" afterPath="$PROJECT_DIR$/Requirements" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/GameTest.java" afterPath="$PROJECT_DIR$/test/GameTest.java" />
     </list>
     <ignored path="Tennis.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366940686084" ignored="false" />
     <file path="/Requirements" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366942158963" ignored="false" />
-    <file path="/ScoreTest.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366943691061" ignored="false" />
+    <file path="/ScoreTest.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366944378686" ignored="false" />
     <file path="/fragment.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366740362534" ignored="false" />
-    <file path="/Score.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366943488623" ignored="false" />
+    <file path="/Score.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366944343533" ignored="false" />
+    <file path="/GameTest.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366943986005" ignored="false" />
+    <file path="/Game.java" changelist="11dce648-e8bc-44f6-a7ed-f688e5ec52eb" time="1366944270831" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       <file leaf-file-name="GameTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/GameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="5" selection-start="2026" selection-end="2026" vertical-scroll-proportion="0.52380955">
+            <state line="83" column="51" selection-start="2490" selection-end="2490" vertical-scroll-proportion="0.44217688">
               <folding />
             </state>
           </provider>
@@ -95,7 +93,7 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="35" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.0">
+            <state line="19" column="31" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,8 +120,8 @@
         <option value="$PROJECT_DIR$/Requirements" />
         <option value="$PROJECT_DIR$/test/ScoreTest.java" />
         <option value="$PROJECT_DIR$/src/Score.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/test/GameTest.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
       </list>
     </option>
   </component>
@@ -582,14 +580,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="35" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.0">
+        <state line="19" column="31" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/GameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="5" selection-start="2026" selection-end="2026" vertical-scroll-proportion="0.52380955">
+        <state line="83" column="51" selection-start="2490" selection-end="2490" vertical-scroll-proportion="0.44217688">
           <folding />
         </state>
       </provider>

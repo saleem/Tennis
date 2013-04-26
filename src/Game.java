@@ -5,7 +5,7 @@ public class Game {
     private int serverScore;
     private int receiverScore;
 
-    private static final String[] CALLS = {"Love", "Fifteen", "Thirty", "Forty", "Deuce"};
+    private static final String[] CALLS = {"Love", "Fifteen", "Thirty", "Forty"};
 
     public String call() {
         if (gameOver()) {
@@ -14,7 +14,22 @@ public class Game {
         if (deuce()) {
             return "Deuce";
         }
-        return createCall();
+        if (beyondDeuce()) {
+            return createAdvantageCall();
+        }
+        return createSimpleCall();
+    }
+
+    private String createAdvantageCall() {
+        String whoHasAdvantage = whoHasAdvantage();
+        return "Advantage " + whoHasAdvantage;
+    }
+
+    private String whoHasAdvantage() {
+        if (gameOver()) throw new RuntimeException("Game over!");
+        if (deuce()) throw new RuntimeException("Deuce!");
+        if (!beyondDeuce()) throw new RuntimeException("Not reached Deuce yet!");
+        return (serverScore > receiverScore) ? "Server" : "Receiver";
     }
 
     private String gameOverCall() {
@@ -36,7 +51,11 @@ public class Game {
         return (serverScore == receiverScore) && (serverScore >= MIN_RALLIES_TO_GET_TO_DEUCE);
     }
 
-    private String createCall() {
+    private boolean beyondDeuce() {
+        return (!gameOver()) && (!deuce()) && (serverScore > MIN_RALLIES_TO_GET_TO_DEUCE || receiverScore > MIN_RALLIES_TO_GET_TO_DEUCE);
+    }
+
+    private String createSimpleCall() {
         return CALLS[serverScore] + " " + (serverScore == receiverScore ? "All" : CALLS[receiverScore]);
     }
 

@@ -70,15 +70,29 @@ public class GameTest {
         assertThat(game.call(), is("Game Receiver"));
     }
 
+    @Test
+    public void whenServerHasWonFourRalliesAndReceiverHasWonThreeRalliesScoreCallIsAdvantageServer() {
+        ralliesForServer(4);
+        ralliesForReceiver(3);
+        assertThat(game.call(), is("Advantage Server"));
+    }
+
+    @Test
+    public void whenServerHasWonFourRalliesAndReceiverHasWonFiveRalliesScoreCallIsAdvantageReceiver() {
+        ralliesForServer(4);
+        ralliesForReceiver(5);
+        assertThat(game.call(), is("Advantage Receiver"));
+    }
+
     private void ralliesForServer(int howMany) {
-        for (int i=0; i < howMany; i++) {
-           game.rallyForServer();
+        for (int i = 0; i < howMany; i++) {
+            game.rallyForServer();
         }
     }
 
     private void ralliesForReceiver(int howMany) {
-        for (int i=0; i < howMany; i++) {
-           game.rallyForReceiver();
+        for (int i = 0; i < howMany; i++) {
+            game.rallyForReceiver();
         }
     }
 }
