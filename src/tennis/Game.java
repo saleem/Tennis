@@ -1,18 +1,17 @@
+package tennis;
+
+import static tennis.TennisConstants.*;
+
 public class Game {
-    private static final int MIN_RALLIES_TO_WIN_GAME = 4;
-    private static final int MIN_DIFF_IN_RALLIES_TO_WIN_GAME = 2;
-    private static final int MIN_RALLIES_TO_GET_TO_DEUCE = 3;
     private int serverScore;
     private int receiverScore;
-
-    private static final String[] CALLS = {"Love", "Fifteen", "Thirty", "Forty"};
 
     public String call() {
         if (gameOver()) {
             return gameOverCall();
         }
         if (deuce()) {
-            return "Deuce";
+            return DEUCE;
         }
         if (beyondDeuce()) {
             return createAdvantageCall();
@@ -21,25 +20,23 @@ public class Game {
     }
 
     private String createAdvantageCall() {
-        String whoHasAdvantage = whoHasAdvantage();
-        return "Advantage " + whoHasAdvantage;
+        return ADVANTAGE + SPACE + whoHasAdvantage();
     }
 
     private String whoHasAdvantage() {
-        if (gameOver()) throw new RuntimeException("Game over!");
-        if (deuce()) throw new RuntimeException("Deuce!");
-        if (!beyondDeuce()) throw new RuntimeException("Not reached Deuce yet!");
-        return (serverScore > receiverScore) ? "Server" : "Receiver";
+        if (gameOver()) throw new InvalidGameOperationException("tennis.Game over! No one has Advantage.");
+        if (deuce()) throw new InvalidGameOperationException("Deuce! No one has Advantage.");
+        if (!beyondDeuce()) throw new InvalidGameOperationException("Not reached Deuce yet! No one has Advantage.");
+        return (serverScore > receiverScore) ? SERVER : RECEIVER;
     }
 
     private String gameOverCall() {
-        String whoWon = whoWon();
-        return "Game " + whoWon;
+        return GAME + SPACE + whoWon();
     }
 
     private String whoWon() {
-        if (!gameOver()) throw new RuntimeException("Game not yet over!");
-        return (serverScore > receiverScore) ? "Server" : "Receiver";
+        if (!gameOver()) throw new InvalidGameOperationException("tennis.Game not yet over! No one has won.");
+        return (serverScore > receiverScore) ? SERVER : RECEIVER;
     }
 
     private boolean gameOver() {
@@ -56,14 +53,20 @@ public class Game {
     }
 
     private String createSimpleCall() {
-        return CALLS[serverScore] + " " + (serverScore == receiverScore ? "All" : CALLS[receiverScore]);
+        return CALLS[serverScore] + SPACE + (serverScore == receiverScore ? ALL : CALLS[receiverScore]);
     }
 
     public void rallyForServer() {
+        if (gameOver()) {
+            throw new InvalidGameOperationException("tennis.Game over: server cannot win any more rallies!");
+        }
         serverScore++;
     }
 
     public void rallyForReceiver() {
+        if (gameOver()) {
+            throw new InvalidGameOperationException("tennis.Game over: receiver cannot win any more rallies!");
+        }
         receiverScore++;
     }
 }

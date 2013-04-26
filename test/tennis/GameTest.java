@@ -1,5 +1,9 @@
+package tennis;
+
 import org.junit.Before;
 import org.junit.Test;
+import tennis.Game;
+import tennis.InvalidGameOperationException;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -44,15 +48,15 @@ public class GameTest {
 
     @Test
     public void whenBothServerAndReceiverHaveWonThreeRalliesScoreCallIsDeuce() {
-        ralliesForServer(3);
-        ralliesForReceiver(3);
+        firstDeuce();
         assertThat(game.call(), is("Deuce"));
     }
 
     @Test
     public void whenBothServerAndReceiverHaveWonFourRalliesScoreCallIsDeuce() {
-        ralliesForServer(4);
-        ralliesForReceiver(4);
+        firstDeuce();
+        ralliesForServer(1);
+        ralliesForReceiver(1);
         assertThat(game.call(), is("Deuce"));
     }
 
@@ -65,23 +69,41 @@ public class GameTest {
 
     @Test
     public void whenServerHasWonTwoRalliesAndReceiverHasWonFourRalliesScoreCallIsGameReceiver() {
-        ralliesForReceiver(4);
         ralliesForServer(2);
+        ralliesForReceiver(4);
         assertThat(game.call(), is("Game Receiver"));
     }
 
     @Test
     public void whenServerHasWonFourRalliesAndReceiverHasWonThreeRalliesScoreCallIsAdvantageServer() {
-        ralliesForServer(4);
-        ralliesForReceiver(3);
+        firstDeuce();
+        ralliesForServer(1);
         assertThat(game.call(), is("Advantage Server"));
     }
 
     @Test
     public void whenServerHasWonFourRalliesAndReceiverHasWonFiveRalliesScoreCallIsAdvantageReceiver() {
-        ralliesForServer(4);
-        ralliesForReceiver(5);
+        firstDeuce();
+        ralliesForServer(1);
+        ralliesForReceiver(2);
         assertThat(game.call(), is("Advantage Receiver"));
+    }
+
+    @Test(expected = InvalidGameOperationException.class)
+    public void whenGameIsOverServerCannotWinAnyMoreRallies() {
+        ralliesForServer(4);
+        ralliesForServer(1);
+    }
+
+    @Test(expected = InvalidGameOperationException.class)
+    public void whenGameIsOverReceiverCannotWinAnyMoreRallies() {
+        ralliesForServer(4);
+        ralliesForReceiver(1);
+    }
+
+    private void firstDeuce() {
+        ralliesForServer(3);
+        ralliesForReceiver(3);
     }
 
     private void ralliesForServer(int howMany) {
